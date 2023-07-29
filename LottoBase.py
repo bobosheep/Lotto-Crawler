@@ -53,11 +53,11 @@ class Lotto():
 
     def getFirstDraw(self):
         sortedDraws = self.getAllDraws()
-        return sortedDraws[0] if len(sortedDraws) > 0 else None
+        return sortedDraws[0][1] if len(sortedDraws) > 0 else None
     
     def getLastDraw(self):
         sortedDraws = self.getAllDraws(r=True)
-        return sortedDraws[0] if len(sortedDraws) > 0 else None
+        return sortedDraws[0][1] if len(sortedDraws) > 0 else None
 
     def getDraw(self, id='103000001'):
         return self.draws[id]

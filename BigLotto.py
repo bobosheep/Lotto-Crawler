@@ -73,5 +73,5 @@ class BigLotto(Lotto):
 if __name__ == "__main__":
     bigLotto = BigLotto()
     bigLotto.load()
-    bigLotto.crawl(force_update=True)
+    bigLotto.crawl()
     bigLotto.save()
