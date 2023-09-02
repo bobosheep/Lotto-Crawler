@@ -1,0 +1,24 @@
+name: Update Super Lotto Numbers
+
+on:
+  schedule:
+    - cron: '0 16 * * 1,4'  # 每天 UTC 時間午夜觸發 (00:00)
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.7'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt 
+
+      - name: Crawl Super Lotto
+        run: python SuperLotto.py 
