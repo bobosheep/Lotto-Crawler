@@ -70,7 +70,7 @@ jobs:
 
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'feat: Add new draw from workflow'
+          message: 'feat(superLotto): Add new draw from workflow'
 
           # If this input is set, the action will push the commit to a new branch with this name.
           # Default: ''
