@@ -2,8 +2,10 @@ name: Update Super Lotto Numbers
 
 on:
   schedule:
-    - cron: '0 16 * * 1,4'  # 每天 UTC 時間午夜觸發 (00:00)
+    - cron: '0 16 * * 2,5'
 
+  workflow_dispatch:
+    
 jobs:
   run-script:
     runs-on: ubuntu-latest
