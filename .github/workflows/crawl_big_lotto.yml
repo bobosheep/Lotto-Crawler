@@ -2,7 +2,7 @@ name: Update Big Lotto Numbers
 
 on:
   schedule:
-    - cron: '0 16 * * 3,6'
+    - cron: '0 16 * * 2,5'
 
   workflow_dispatch:
 
