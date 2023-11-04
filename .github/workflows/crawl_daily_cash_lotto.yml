@@ -23,7 +23,7 @@ jobs:
         run: pip install -r requirements.txt 
 
       - name: Crawl Big Lotto
-        run: python BigLotto.py 
+        run: python DailyCash.py 
 
       - name: Update repo
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
@@ -70,7 +70,7 @@ jobs:
 
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'feat(bigLotto): Add new draw from workflow'
+          message: 'feat(dailyCash): Add new draw from workflow'
 
           # If this input is set, the action will push the commit to a new branch with this name.
           # Default: ''
