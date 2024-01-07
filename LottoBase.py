@@ -1,9 +1,9 @@
 from datetime import datetime
 import json
-
+# https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result?period&month=2024-01&pageNum=1&pageSize=50
 class Lotto():
-    def __init__(self, pageURL='https://www.taiwanlottery.com.tw/lotto/Lotto649/history.aspx'):
-        self.pageURL = pageURL
+    def __init__(self, api='https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result'):
+        self.api = api
         self.default_dir = 'data'
         self.default_filename = 'Lotto.json'
         self.draws = {}
@@ -38,11 +38,11 @@ class Lotto():
         return self
 
     def crawlMonth(self, year, month):
-        data = self.crawlPage(year, month)
+        data = self.crawlApi(year, month)
         self.parse(data)
         return self
 
-    def crawlPage(self, year, month):
+    def crawlApi(self, year, month):
         raise('Need Implement')
     
     def parse(self, html_body):
