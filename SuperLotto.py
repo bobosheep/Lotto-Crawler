@@ -37,7 +37,7 @@ class SuperLotto(Lotto):
 
             # print(f'第 {drawID} 期, {date} 獎金 {price}， 號碼: {draw_numbers}，特別號: {specialNum}') 
 
-            self.draws[drawID] = {
+            self.draws[str(drawID)] = {
                 'draw'      : str(drawID),
                 'date'      : date,
                 'year'      : int(date.split('/')[0]),
